@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Browary Polskie</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/site.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="./js/core.js"></script>
+	
+</head>
+<body>
+	<main>
+		<header id="nag" class="header row container">
+			<h1 class="header__logo row v_center h_center">
+				<a href="./index.html" class="navContainer__link">STRONA GŁÓWNA</a>
+			</h1>
+			<nav class="header__nav navContainer row h_center flex_grow">
+				<div class="navContainer__linkContainer row v_center">
+					<a href="marki.html" class="navContainer__link">Marki</a>
+					<div class="navContainer__submenu">
+						<ul>
+							<li><a href="./tyskie.html">Tyskie</a></li>
+							<li><a href="./Namysłów.html">Namysłów</a></li>
+							<li><a href="./Żywiec.html">Żywiec</a></li>
+							<li><a href="./Lech.html">Lech</a></li>
+							<li><a href="./Warka.html">Warka</a></li>
+							<li><a href="./Książece.html">Książece</a></li>
+							<li><a href="./Okocim.html">Okocim</a></li>
+						</ul>
+					</div>
+				</div>
+				<a href="Fakty.html" class="navContainer__link">Piwne Fakty i Mity</a>
+				<a href="./prezentacja.html" class="navContainer__link js__blogLink">Prezentacja</a>
+				<a href="Kontakt.html" class="navContainer__link" id="downButton js__downButton">Kontakt</a>
+			</nav>
+
+			<div id="todaysDate" style="color: #bfc3a7;"></div>
+			<span id="Poland_z733" style="font-size:24px"></span>
+		</header>
+
+		<article class="siteView siteView--kontakt">
+			<h3 class="descHeader">
+				<a class="formtext">Formularz Kontaktowy</a>
+			</h3>
+
+			<section style="z-index: 10;background: rgb(61,149,198);background: linear-gradient(360deg, rgba(61,149,198,1) 9%, rgba(108,160,185,1) 31%, rgba(96,191,200,0.5214286398153012) 76%);">
+				<form action="mailto: imie.nazwisko@put.poznan.pl" method="post" enctype="text/plain">
+					<p>
+						<i><b class="font_look">Wypełnij poniższy formularz i prześlij go do nas.</b></i>
+						<br />
+						<a class="font_look1">Obwiązkowe pola oznaczono znakiem (<em>*</em>).</a>
+					</p>
+					<fieldset>
+						<legend>Dane kontaktowe</legend>
+						<label for="imie" class="label1">Imię<em>*</em></label>
+						<input id="imie" name="name" placeholder="Podaj imię" autofocus required />
+						<br />
+						<label for="" class="label1">Nazwisko<em>*</em></label>
+						<input id="nazwisko" name="surname" placeholder="Podaj nazwisko" required />
+						<br />
+						<label for="telefon" class="label1">Nr telefonu</label>
+						<input id="telefon" name="phone" placeholder="(+48)xxx-xxx-xxx" />
+						<br />
+						<label for="" class="label1">E-mail<em>*</em></label>
+						<input id="mail" name="email" type="email" required />
+						<br />
+					</fieldset>
+					<fieldset>
+						<legend>Szczegółowe dane osobowe</legend>
+						<label for="birth_date">Data urodzenia</label>
+						<input type="date" id="birth_date" name="birth_1" plecholder="dd.mm.rrrr"><br />
+						<p>
+							<label>Płeć</label><br />
+							<label for="sex_1"><input type="radio" id="sex_1" name="sex" value="woman">Kobieta</label><br />
+							<label for="sex_2"><input type="radio" id="sex_2" name="sex" value="man">Mężczyzna</label><br />
+							<label for="sex_3"><input type="radio" id="sex_3" name="sex" value="other" checked>Inna</label><br />
+						</p>
+						<label for="region">Region zamieszkania<em>*</em></label>
+						<select id="region">
+							<option value="dolnoslaskie">dolnośląskie</option>
+							<option value="kujawsko-pomorskie">kujawsko-pomorskie</option>
+							<option value="lubelskie">lubelskie</option>
+							<option value="lubuskie">lubuskie</option>
+							<option value="lodzkie">łódzkie</option>
+							<option value="malopolskie">małopolskie</option>
+							<option value="mazowieckie">mazowieckie</option>
+							<option value="opolskie">opolskie</option>
+							<option value="podkarpackie">podkarpackie</option>
+							<option value="podlaskie">podlaskie</option>
+							<option value="pomorskie">pomorskie</option>
+							<option value="slaskie">śląskie</option>
+							<option value="swietokrzyskie">świętokrzyskie</option>
+							<option value="warminsko-mazurskie">warmińsko-mazurskie</option>
+							<option value="wielkopolskie">wielkopolskie</option>
+							<option value="zachodniopomorskie">zachodniopomorskie</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<legend>Ulubiony Browar</legend>
+
+						<label for="continent">Wpisz swój wybór:<em>*</em></label>
+						<input type="text" list="continent" name="land" required>
+						<datalist id="continent">
+							<option value="Warka">
+							<option value="Lech">
+							<option value="Namysłów">
+							<option value="Tyskie">
+							<option value="Książęce">
+							<option value="Żubr">
+							<option value="Żywiec">
+							<option value="Okocim">
+						</datalist>
+					</fieldset>
+					<fieldset>
+						<legend>Twoja ocena Browara</legend>
+						<p>
+							10 - Świetny!<br />
+							1 - Już tam nie wrócę!<br />
+							<input style="width:200px" type="range" id="rating" name="rate" min="1" max="10"><br />
+							<label for="rating">1 &nbsp; 2 &nbsp; 3 &nbsp;&nbsp; 4 &nbsp;&nbsp; 5 &nbsp;&nbsp; 6 &nbsp;&nbsp;  7 &nbsp;&nbsp; 8 &nbsp; 9 &nbsp; 10</label>
+						</p>
+						<p>
+							<label for="comment">Dlaczego tak oceniasz?<em>*</em></label><br>
+							<textarea style="background-color: #e4e9eb;width: 650px; height: 80px" id="comment" oninput="validateComments(this)"></textarea>
+						</p>
+						<canvas id="pc" width="100" height="100"></canvas>
+                            <script>
+
+								const canvas = document.getElementById('pc');
+								const context = canvas.getContext('2d');
+							
+								const katpocz = 0.2;
+								const katkonc = 0.6;
+								let kat = katpocz;
+								let zamykanie = false;
+							
+								function pacman() {
+							
+								  context.clearRect(0, 0, canvas.width, canvas.height);
+							
+								  context.beginPath();
+								  context.arc(50, 50, 50, (1.6+katkonc - kat) * Math.PI, (1.59+katpocz + kat)  * Math.PI, false);
+								  context.lineTo(50, 50);
+								  context.closePath();
+								  context.fillStyle = 'yellow';
+								  context.fill();
+							
+								  context.beginPath();
+								  context.arc(50, 20, 7, 0, 2 * Math.PI);
+								  context.fillStyle = 'black';
+								  context.fill();
+							
+								  context.stroke();
+							
+								  if (zamykanie) {
+									kat -= 0.01;
+								  } else {
+									kat += 0.01;
+								  }
+							
+								  if (zamykanie && kat <= 0) {
+									zamykanie = false;
+								  } else if (!zamykanie && kat >= (katkonc - katpocz) / 2) {
+									zamykanie = true;
+								  }
+							
+								  requestAnimationFrame(pacman);
+								}
+							
+								pacman();
+							  </script>
+                        </canvas>
+					</fieldset>
+					<fieldset>
+						<legend>Załącznik</legend>
+						<label for="plik">Prześlij swój pomysł na Browar</label>
+						<input type="file" id="plik" name="file" accept="#" />
+					</fieldset>
+					<fieldset>
+						<legend>Zgody i Regulaminy</legend>
+						<label for="statute"><input type="checkbox" id="statute" name="statute_1" checked required>Zapoznałem się i akceptuję Regulamin.<em>*</em>(pole obowiązkowe)</label> <br>
+						<label for="rodo_OK"><input type="checkbox" id="rodo_OK" name="rodo_1" required>Wyrażam zgodę na przetwarzanie danych osobowych.<em>*</em>(pole obowiązkowe)</label> <br>
+						<label for="mail_OK"><input type="checkbox" id="mail_OK" name="e-mail_1">Marketing przez E-mail (opcjonalnie)</label> <br>
+					</fieldset>
+					<p>
+						<input type="submit" value="Wyślij formularz" />
+						<input type="reset" value="Kasuj dane w formuarzu" />
+					</p>
+				</form>
+			</section>
+		</article>
+		<footer>
+			<div class="footer row v_center h_center">
+				<div class="footer__content row h_center">
+					<i class="icon icon-phone"></i>
+					<div class="footer__iconText">
+						<a href="tel:+48 12 34 123 45">+48 12 34 123 45</a><br />
+						<a href="tel:+48 21 42 037 12">+48 21 42 037 12</a><br />
+						<a href="jakub.matej@student.put.poznan.pl">jakub.matej@student.put.poznan.pl</a>
+					</div>
+				</div>
+				<div class="footer__content row h_center">
+					<i class="icon icon-location"></i>
+					<div class="footer__iconText">
+						61-845 Poznań<br />
+						Strzelecka 12
+					</div>
+				</div>
+				<div class="footer__upButton js__upButton row v_center h_center"><i class="icon-arrow-up"></i></div>
+			</div>
+			<div class="footer__credits row">
+				<div style="z-index:10">Strona stworzona przez: Jakub Matej 153174 EN2-L3<br>Projekt strony internetowej wykonany w ramach
+					zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka.</div>
+				<body onLoad="window.setTimeout('getSecs()',1)">
+				</P>
+				<P style="display: none;"><form name="tijd"><P>
+					<div class="col">
+						<div>
+							Licznik odwiedzin:&nbsp
+							<font>
+								<a href="http://www.licz.pl" title="Darmowe Liczniki"><font color="#ECECEC"><script src="http://www.licz.pl/counter.php?name=anoeto&start=WARTOSC-STARTOWA"></script></font></a><a href="http://www.licz.pl"><img src="http://www.licz.pl/donotalterthecode.gif" width="5" height="5" border="0"></a>
+								
+							</font>
+						</div>
+						<p>Czas spędzony na stronie: <span id="counter">0</span> sekund</p>
+					</div>
+			</div>
+		</footer>
+	</main>
+</body>
+</html>

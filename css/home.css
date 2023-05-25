@@ -1,0 +1,250 @@
+
+.mainSlider{
+	width: 100%;
+	height: 65vw;
+	position: relative;
+	min-height: 350px;
+}
+.mainSlider__slide{
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .8s, visibility .8s;
+}
+.mainSlider__slide.-active{
+	opacity: 1;
+	visibility: visible;
+}
+
+.mainSlider__arrow{
+	width: 40px;
+	height: 40px;
+	background-color: rgba(0,0,0,.5);
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #ECECEC;
+	font-size: 1rem;
+	transition: background-color .3s;
+}
+.mainSlider__arrow:hover{
+	background-color: rgba(0,0,0,.7);
+}
+.mainSlider__arrow--right{
+	right: 0;
+}
+
+
+.textSection{
+	padding: 16px;
+	font-size: 1.2rem;
+}
+.textSection__content{
+	width: 100%
+}
+.textSection p{
+	text-align: center;
+}
+
+.polandMap{
+	padding: 10px 20px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	margin-top: 5vw;
+}
+.polandMap__mapContainer{
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	max-height: 800px;
+	height: 50vw;
+	min-height: 260px;
+}
+.polandMap map,
+.polandMap map svg{
+	max-height: 100%;
+	max-width: 100%;
+}
+.polandMap map svg path{
+	fill: #848484;
+	transition: fill .3s;
+	cursor: pointer; 
+	position: relative;
+}
+.polandMap map svg path.-active,
+.polandMap map svg path:hover{
+	fill: #5A5A5A;
+}
+.polandMap__infoContainer{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.polandMap__info{
+	top: 50%;
+	display: none;
+	transition: opacity .3s, visibility .3s;
+}
+.polandMap__info.-active{
+	display: flex;
+}
+.polandMap__info p{
+	margin-top: 0;
+}
+.polandMap__infoVoi {
+	position: absolute;
+	top: 12px;
+	left: 0;
+	font-size: 15px;
+	color: #565656;
+}
+
+
+
+.bannerSection{
+	width: 100%;
+	height: 280px;
+	background-repeat: no-repeat;
+	
+	background-size: cover;
+	
+	position: relative;
+}
+.bannerSection__text{
+	color: #ECECEC;
+	font-size: 2.5rem;
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	right: 5%;
+	transform: translateY(-50%);
+	font-weight: 500;
+	text-align: center;
+}
+.bannerSection__text b{
+	text-transform: uppercase;
+}
+
+
+
+.infoSection {
+	width: 100%;
+	height: 180px;
+	max-height: 700px;
+}
+.infoSection__content{
+	width: 300px;
+	height: 130px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.mapSection{
+	height: 300px;
+}
+.mapSection iframe{
+	width: 100%;
+	max-height: 100%;
+}
+
+@media (max-device-width: 1199px){
+	.polandMap .polandMap__info p{
+		font-size: 20px;
+	}
+}
+
+@media (min-device-width: 450px){
+	.mapSection{
+		height: auto;
+	}
+	.textSection{
+		padding: 40px;
+	}
+	.infoSection__content{
+		width: 60%;
+		height: 80%;
+	}
+	.infoSection {
+		height: 36vw;
+	}
+}
+
+@media (min-device-width: 768px){
+	.mainSlider{
+		height: 50vw;
+	}
+	.textSection__content{
+		width: 85%;
+	}
+	.textSection{
+		font-size: 1.6rem;
+	}
+	div.polandMap{
+		flex-direction: row;
+	}
+	.polandMap__mapContainer{
+		width: 50%;
+		height: auto;
+		padding-right: 20px;
+	}
+	.polandMap{
+		height: 65vw;
+	}
+	.polandMap__infoContainer{
+		width: 50%;
+	}
+	.polandMap__info{
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-50%);
+	}
+	.polandMap__info.-active{
+		opacity: 1;
+		visibility: visible;
+	}
+	.polandMap{
+		margin-top: 0;
+	}
+	.bannerSection{
+		height: 400px;
+	}
+	.bannerSection__text{
+		font-size: 3rem;
+		left: 15%;
+		right: 0;
+		text-align: left;
+	}
+}
+
+@media (min-device-width: 1200px){
+	.mainSlider{
+		height: calc(100vh - 80px);
+	}
+	
+	.mainSlider__arrow{
+		width: 50px;
+		height: 50px;
+		font-size: 1.4rem;
+	}
+	.textSection__content{
+		width: 60%;
+	}
+	.polandMap{
+		height: auto;
+	}
+	.bannerSection__text{
+		font-size: 3.5rem;
+	}
+}
